@@ -349,13 +349,20 @@ body.darkMode #darkMode:active {
    main, section {
     margin: 1rem;
    }
+   h1, h2 {
+    text-align: center;
+   }
    #about ul {
     grid-template-columns: 1fr;
     gap: 1rem;
+    justify-items: center;
    }
    #projects a {
     grid-template-columns: 1fr;
     margin: 1rem 0;
+    text-align: center;
+   }
+   #contact p {
     text-align: center;
    }
    #contact #mediaLink {
