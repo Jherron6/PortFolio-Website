@@ -55,7 +55,7 @@ table {
 }
 html {
     background: linear-gradient(#D5E0E8, #F9FCFF);
-    min-width: 800px;
+    /* min-width: 800px; */
 }
 body {
     display: grid;
@@ -270,12 +270,12 @@ nav a:active, #projects a:active, #mediaLinks a:active {
     position: fixed;
     bottom: 5px;
     right: 5px;
-    width: 2vw;
-    height: 2vw;
+    width: clamp(1.5rem, 5vw, 3rem);
     border:2px solid transparent;
     border-radius: 50%;
     background-color: #698395;
     z-index: 100;
+    aspect-ratio: 1 /1;
 }
 #darkMode:hover {
     background-color: #F9FCFF;
@@ -324,4 +324,50 @@ body.darkMode #darkMode:hover {
 }
 body.darkMode #darkMode:active {
     border-color: #28353E;
+}
+@media only screen and (max-width: 600px) {
+   body{
+    display: block;
+   }
+   nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+   }
+   nav ul {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+   }
+   nav a {
+    font-size: 1.2rem;
+   }
+   header {
+    background: #9FB2BF;
+   }
+   main, section {
+    margin: 1rem;
+   }
+   #about ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+   }
+   #projects a {
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+    text-align: center;
+   }
+   #contact #mediaLink {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+   }
+   #contact a {
+    grid-template-columns: 1fr;
+    justify-items: center;
+   }
+   #contact .image-frame {
+    width: 10vw;
+    height: 10vw;
+   }
 }
