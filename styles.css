@@ -85,7 +85,8 @@ h1 {
     text-align: center;
 }
 h2 {
-    justify-self: center;
+    margin: auto;
+    text-align: center;
 }
 h3, p, footer, div li {
     font-family: Arial, Helvetica, sans-serif;
@@ -270,7 +271,7 @@ nav a:active, #projects a:active, #mediaLinks a:active {
     position: fixed;
     bottom: 5px;
     right: 5px;
-    width: clamp(1.5rem, 5vw, 3rem);
+    width: clamp(1.5rem, 5vw, 2.5rem);
     border:2px solid transparent;
     border-radius: 50%;
     background-color: #698395;
@@ -348,9 +349,6 @@ body.darkMode #darkMode:active {
    }
    main, section {
     margin: 1rem;
-   }
-   h1, h2 {
-    text-align: center;
    }
    #about ul {
     grid-template-columns: 1fr;
