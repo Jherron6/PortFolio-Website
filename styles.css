@@ -94,6 +94,7 @@ h3, p, footer, div li {
 p, h3 {
     justify-self: center;
     padding: 1.5rem;
+    text-align: center;
 }
 h3 {
     font-size: clamp(1.5rem, 1.5vw, 3.5rem);
@@ -120,7 +121,6 @@ nav ul li:first-child a {
 }
 a {
     text-decoration: none;
-    padding: 5%;
 }
 nav a {
     font-size: clamp(2rem, 3.5vw, 4rem);
@@ -162,6 +162,7 @@ div li {
     align-items: center;
     border: 2px solid transparent;
     border-radius: 5px;
+    padding: 5%;
 }
 #projects p {
     justify-self: baseline;
@@ -185,6 +186,7 @@ div li {
     border: 2px solid transparent;
     justify-self: center;
     border-radius: 5px;
+    padding: 5%;
 }
 #contact a {
     display: grid;
@@ -307,7 +309,7 @@ body.darkMode :is(#projects a:active, #mediaLinks a:active) {
     border-color: #475F70;
 }
 body.darkMode nav a:active {
-    border-color: #28353E;
+    border-color: #475F70;
 }
 body.darkMode .image-frame {
     border-color: #28353E;
@@ -326,9 +328,12 @@ body.darkMode #darkMode:hover {
 body.darkMode #darkMode:active {
     border-color: #28353E;
 }
+/* Mobile Styles */
 @media only screen and (max-width: 600px) {
    body{
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .25fr 8fr .25fr;
    }
    nav {
     position: relative;
@@ -341,14 +346,30 @@ body.darkMode #darkMode:active {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
    }
+   nav li {
+    display: grid;
+   }
    nav a {
     font-size: 1.2rem;
+    justify-self: center;
    }
    header {
     background: #9FB2BF;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
    }
-   main, section {
+   main {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+   }
+   section {
     margin: 1rem;
+   }
+   h1 {
+    line-height: 5rem;
+   }
+   h1, h2 {
+    padding: .75em;
    }
    #about ul {
     grid-template-columns: 1fr;
@@ -374,5 +395,13 @@ body.darkMode #darkMode:active {
    #contact .image-frame {
     width: 10vw;
     height: 10vw;
+   }
+   footer{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+   }
+   #darkMode {
+    bottom: 11px;
+    right: 25px;
    }
 }
