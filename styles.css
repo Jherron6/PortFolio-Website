@@ -403,5 +403,6 @@ body.darkMode #darkMode:active {
    #darkMode {
     bottom: 11px;
     right: 25px;
+    margin-right: 5%;
    }
 }
