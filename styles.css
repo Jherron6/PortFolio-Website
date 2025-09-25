@@ -91,7 +91,7 @@ h2 {
 h3, p, footer, div li {
     font-family: Arial, Helvetica, sans-serif;
 }
-p, h3 {
+h3 {
     justify-self: center;
     padding: 1.5rem;
     text-align: center;
@@ -101,6 +101,8 @@ h3 {
 }
 p {
     font-size: clamp(1rem, 1.5vw, 3rem);
+    justify-self: center;
+    padding: 1.5rem;
 }
 nav {
     position: sticky;
