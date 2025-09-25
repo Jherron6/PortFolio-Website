@@ -51,7 +51,7 @@ table {
 /* Styles begin here */
 @font-face {
     font-family: 'JenConnect';
-    src: url('fonts/jenConnect.woff2') format('woff2');
+    src: url('jenConnect.woff2') format('woff2');
 }
 html {
     background: linear-gradient(#D5E0E8, #F9FCFF);
